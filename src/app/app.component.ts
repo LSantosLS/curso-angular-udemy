@@ -14,7 +14,9 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
   template: `
     {{valor}}
     <button (click)="adicionar()">Adicionar</button>
-    <app-title title="Olá Mundo"></app-title>
+    <app-title *ngIf="destruir" title="Olá Mundo"></app-title>
+    <br>
+    <button (click)="destruirComponent()">Destruir Componente</button>
     <router-outlet></router-outlet>
   `,
 })
@@ -22,7 +24,13 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   public valor : number = 1;
 
+  public destruir : boolean = true;
+
   constructor(){}
+
+  public destruirComponent() {
+    this.destruir = false;
+  }
 
   public adicionar(): number {
     return this.valor += 1;
