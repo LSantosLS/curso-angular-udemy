@@ -15,9 +15,11 @@ import { Component, OnInit } from '@angular/core';
       <h1>Teste</h1>
       <h3>Este é um grande teste</h3>
     </app-diretivas-atributos>
+    
+    <app-diretivas-atributos></app-diretivas-atributos>
     -->
 
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <app-new-component></app-new-component>
 
     <router-outlet></router-outlet>
   `,
